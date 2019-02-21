@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Rock, Paper, and Sicssors</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Rock, Paper, Sicssors</h1>
+        <!-- <h3 id="user-name"> User Name</h3> -->
+
+        <h4>Win: <span id="win-text">0</span></h4>
+        <h4>Losses: <span id="losses-text">0</span></h4>
+        <h4>Ties: <span id="tie-text">0</span></h4>
+        <h4>Number of rounds left: <span id="roundLeft-text">9</span></h4>
+        
+        <br><br><br>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h2>YOUR GUESS: <h1 id="yourGuess-text">0</h1></h2>
+                </div>
+                <div class="col">
+                    <h2>COMPUTER GUESS: <h1 id="computerGuess-text">0</h1></h2>
+                </div>
+            </div>
+        </div>
+        
+        <br><br><br>
+
+        <h1 id="result"></h1>
+        <h1 id="end"></h1>
+
+    </div>
+
+    <!-- link my external js file -->
+    <script src="main.js"></script>
+</body>
+</html>
