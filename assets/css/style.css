@@ -1,4 +1,14 @@
-.container {
-    border: solid 5pfx black;
+.col {
+    border: solid 5px rgb(85, 85, 85);
+    border-radius: 20px;
+    background-color: white;
 }
 
+#yourGuess-text, #computerGuess-text{
+    text-align: center;
+    font-size: 80px;
+}
+
+.display-4 {
+    text-align: center;
+}
