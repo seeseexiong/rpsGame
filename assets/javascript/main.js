@@ -93,16 +93,15 @@ document.onkeyup = function(event) {
 
     //if rounds left reaches zero then determine who wins and end the game
     if (roundLeft === 0) {
-        document.querySelector("#end").innerHTML = "GOOD GAME :)";
         //if your score is higer than computer's score then display you win. Vise versa
         if (lossScore > winScore) {
-            document.querySelector("#result").innerHTML = "YOU LOSE!!!";
+            document.querySelector("#gameRounds").innerHTML = "YOU LOSE!!!";
         }
         else if(winScore === lossScore) {
-            document.querySelector("#result").innerHTML = "It's a TIE!!!";
+            document.querySelector("#gameRounds").innerHTML = "It's a TIE!!!";
         }
         else {
-            document.querySelector("#result").innerHTML = "VICTORY!!!";
+            document.querySelector("#gameRounds").innerHTML = "VICTORY!!!";
         }
     }
 }
