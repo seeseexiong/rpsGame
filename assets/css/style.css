@@ -10,9 +10,12 @@
     font-size: 50px;
 }
 
-/* .col {
-    width: 30%;
-} */
+.col {
+    width: 20%;
+}
+#gameRounds {
+    font-size: 50px;
+}
 .display-4, #gameRounds {
     text-align: center;
 }
