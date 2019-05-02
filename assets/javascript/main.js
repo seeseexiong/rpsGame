@@ -4,7 +4,7 @@ var lossScore = 0;
 var tieScore = 0;
 var roundLeft = 9;
 var computerOptions = ["r", "p", "s"];
-
+var computerGuess
 
 //create functions that display onto DOM
 //update winning score
@@ -32,6 +32,17 @@ function updateYG() {
     document.querySelector("#yourGuess-text").innerHTML = event.key;
 };
 
+//then computer pick randomly and display their pick on DOM
+function randomPick() {
+    computerGuess = computerOptions[Math.floor(Math.random()*computerOptions.length)];
+}
+
+//display computer guess on DOM
+function updateCG() {
+    document.querySelector("#computerGuess-text").innerHTML = computerGuess;
+};
+
+
 
 
 //Event is when you pressed on a key 'r, p, s' then computer randomly pick a key
@@ -55,12 +66,8 @@ document.onkeyup = function(event) {
         //display your guess on DOMS
         updateYG();
 
-        //then computer pick randomly and display their pick on DOM
-        var computerGuess = computerOptions[Math.floor(Math.random()*computerOptions.length)];
-        //display computer guess on DOM
-        function updateCG() {
-            document.querySelector("#computerGuess-text").innerHTML = computerGuess;
-        };
+        // =========== place computer Guess here =====
+        randomPick();
         updateCG();
         
         //if user win then winning score increase by 1, if computer wins then losing score increase by 1
@@ -94,7 +101,7 @@ document.onkeyup = function(event) {
     //if rounds left reaches zero then determine who wins and end the game
     if (roundLeft === 0) {
         //if your score is higer than computer's score then display you win. Vise versa
-        if (lossScore > winScore) {
+        if (lossScore > winScore ) {
             document.querySelector("#gameRounds").innerHTML = "YOU LOSE!!!";
         }
         else if(winScore === lossScore) {
